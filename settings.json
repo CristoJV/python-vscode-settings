@@ -1,0 +1,50 @@
+{
+    // ------------------------------------------------------------
+    // Python environment
+    // ------------------------------------------------------------
+
+    "python.useEnvironmentsExtension": true,
+    "python.analysis.typeCheckingMode": "off",
+
+    // ------------------------------------------------------------
+    // Ruff
+    // ------------------------------------------------------------
+
+    // Preferir la configuración del pyproject.toml
+    "ruff.configurationPreference": "filesystemFirst",
+
+    // Usar Ruff instalado dentro del entorno virtual del proyecto
+    "ruff.importStrategy": "fromEnvironment",
+
+    // ------------------------------------------------------------
+    // Mypy
+    // ------------------------------------------------------------
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    // Analyzar todo el workspace, no solamente los archivos abiertos
+    "mypy-type-checker.reportingScope": "workspace",
+    // dmypy mejora el rendimiento
+    "mypy-type-checker.preferDaemon": true,
+
+    // ------------------------------------------------------------
+    // Python editor
+    // ------------------------------------------------------------
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        },
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+
+        "editor.rulers": [
+            88
+        ]
+    },
+
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.formatOnSave": false
+}
